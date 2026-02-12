@@ -1,0 +1,38 @@
+---
+title: "Density-Based Smart Traffic Management"
+publishedAt: "2024-11-10"
+summary: "A sensor-based adaptive traffic signal management system using TinkerCAD for simulation and prototyping of intelligent traffic control."
+images:
+  - "/images/projects/project-01/cover-02.jpg"
+team:
+  - name: "Chitturi Venkata Krishna Chaitanya"
+    role: "IoT Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://github.com/iamchitturi"
+---
+
+## Overview
+
+Traditional traffic signals use fixed timing cycles regardless of actual traffic conditions, leading to unnecessary congestion and delays. This project implements a smart, density-based traffic signal system that dynamically adjusts signal timing based on real-time vehicle density detected by sensors.
+
+## Key Features
+
+- **Sensor-based Detection**: Used IR sensors to detect vehicle density at each lane of an intersection.
+- **Adaptive Signal Timing**: Implemented logic to allocate more green time to lanes with higher vehicle density, reducing average wait times.
+- **TinkerCAD Simulation**: Built and tested the complete circuit and logic using TinkerCAD for virtual prototyping before hardware deployment.
+- **Scalable Design**: The architecture supports multi-intersection deployments with centralized or distributed control logic.
+
+## Technologies Used
+
+- **Arduino** microcontroller for signal control logic
+- **IR Sensors** for vehicle density detection
+- **TinkerCAD** for circuit simulation and prototyping
+- **C/C++** for embedded control firmware
+
+## Challenges and Learnings
+
+The main challenge was designing a reliable density detection mechanism that works across varying traffic conditions and lighting environments. Tuning sensor sensitivity and debouncing inputs were crucial for accurate readings. This project enhanced my skills in IoT system design, sensor integration, and real-time decision logic for embedded systems.
+
+## Outcome
+
+The smart traffic system reduces average vehicle wait times by dynamically prioritizing busier lanes, demonstrating the potential for IoT-driven infrastructure improvements in urban traffic management.

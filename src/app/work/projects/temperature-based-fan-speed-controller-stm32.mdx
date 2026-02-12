@@ -1,0 +1,38 @@
+---
+title: "Temperature-Based Fan Speed Controller – STM32"
+publishedAt: "2025-02-01"
+summary: "A PWM-controlled fan speed system using real-time temperature sensor input on the STM32 microcontroller platform."
+images:
+  - "/images/projects/project-01/cover-04.jpg"
+team:
+  - name: "Chitturi Venkata Krishna Chaitanya"
+    role: "Embedded Systems Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://github.com/iamchitturi"
+---
+
+## Overview
+
+This embedded systems project implements an automatic fan speed controller that adjusts RPM based on real-time temperature readings. Built on the STM32 microcontroller platform, it uses ADC for temperature sensing and PWM signals for precise motor speed control.
+
+## Key Features
+
+- **Real-time Temperature Sensing**: Interfaced an analog temperature sensor with the STM32's ADC for continuous temperature monitoring.
+- **PWM-based Speed Control**: Generated PWM signals with dynamically adjusted duty cycles to control fan speed proportionally to temperature changes.
+- **Threshold Logic**: Implemented configurable temperature thresholds for multi-level fan speed stages (low, medium, high, maximum).
+- **Energy Efficient**: The system only runs the fan at the required speed, minimizing power consumption.
+
+## Technologies Used
+
+- **STM32 Microcontroller** (ARM Cortex-M series)
+- **C** for embedded firmware development
+- **STM32 HAL Library** for peripheral configuration
+- **ADC & PWM peripherals** for sensor reading and motor control
+
+## Challenges and Learnings
+
+Calibrating the ADC readings to produce stable temperature values required careful noise filtering and averaging. Mapping temperature ranges to appropriate PWM duty cycles demanded iterative testing. This project gave me hands-on experience with real-time embedded systems, hardware-software integration, and peripheral programming on ARM microcontrollers.
+
+## Outcome
+
+The system reliably adjusts fan speed in response to ambient temperature changes, demonstrating practical embedded systems engineering with real-time sensor feedback and actuator control.

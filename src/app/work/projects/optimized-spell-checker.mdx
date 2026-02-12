@@ -1,0 +1,37 @@
+---
+title: "Optimized Spell Checker"
+publishedAt: "2024-09-20"
+summary: "A Trie-based data structure implementation for accurate and fast spelling suggestions, optimized for memory efficiency and rapid lookups."
+images:
+  - "/images/projects/project-01/cover-03.jpg"
+team:
+  - name: "Chitturi Venkata Krishna Chaitanya"
+    role: "Software Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://github.com/iamchitturi"
+---
+
+## Overview
+
+This project implements a high-performance spell checker using Trie (prefix tree) data structures. The system provides fast and accurate word suggestions by leveraging the hierarchical nature of tries for efficient prefix matching and edit-distance calculations.
+
+## Key Features
+
+- **Trie-based Architecture**: Implemented a prefix tree for O(L) lookup time where L is the word length, enabling near-instant spell checking.
+- **Edit Distance Algorithm**: Integrated Levenshtein distance computation to suggest corrections for misspelled words within a configurable tolerance.
+- **Memory Optimization**: Compressed trie nodes to minimize memory footprint while maintaining fast traversal speeds.
+- **Dictionary Support**: Loaded and indexed large dictionaries efficiently for comprehensive word coverage.
+
+## Technologies Used
+
+- **C++** for core data structure implementation
+- **Standard Template Library (STL)** for containers and algorithms
+- **Custom Trie implementation** with compression optimizations
+
+## Challenges and Learnings
+
+Balancing speed and memory was the core challenge — a naive trie could consume excessive memory for large dictionaries. Implementing node compression and lazy loading techniques resolved this. This project strengthened my understanding of advanced data structures, algorithm complexity analysis, and memory management in C++.
+
+## Outcome
+
+The spell checker processes lookups and suggestions in sub-millisecond times, demonstrating the power of well-chosen data structures for text-processing applications.

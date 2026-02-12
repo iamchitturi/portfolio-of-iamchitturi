@@ -2,48 +2,27 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Chaitanya",
+  lastName: "Chitturi",
+  name: "Chitturi Venkata Krishna Chaitanya",
+  role: "Software Developer • AI/ML Enthusiast • Full Stack Learner",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "chitturi.workspace@gmail.com",
+  location: "Asia/Kolkata", // IANA time zone identifier for India
+  languages: ["English", "Telugu", "Hindi"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Stay updated with my latest projects and insights</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://github.com/iamchitturi",
     essential: true,
   },
   {
@@ -60,24 +39,24 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Crafting intelligent solutions through code & creativity</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Tiger Detection AI</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured project
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/tiger-detection-in-forest-areas-using-night-vision",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I'm Chaitanya, a <Text as="span" size="xl" weight="strong">Computer Science</Text> student at Amrita Vishwa Vidyapeetham, passionate about AI/ML, <br /> embedded systems, and building impactful software solutions.
+    </>
   ),
 };
 
@@ -85,7 +64,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Rajahmundry, India`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,60 +73,91 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am a Computer Science Engineering student at Amrita Vishwa Vidyapeetham (2023–2027),
+        currently building a strong technical foundation across programming, AI/ML, embedded systems,
+        and software development. I am committed to continuous learning, personal growth, and evolving
+        into a responsible and skilled professional.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Projects",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Tiger Detection in Forest Areas",
+        timeframe: "2025",
+        role: "AI/ML Project — CNN-based Classifier",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Built a CNN-based tiger detection classifier using TensorFlow/Keras with image augmentation
+            for night vision forest surveillance.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Implemented data preprocessing with augmentation techniques to improve model accuracy
+            on low-visibility and nocturnal images.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Tiger Detection Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Optimized Spell Checker",
+        timeframe: "2024",
+        role: "Data Structures Project — Trie-based Architecture",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Designed and implemented a Trie-based spell checker for accurate and fast word suggestions
+            using optimized data structures.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Achieved efficient memory usage and rapid lookup times through prefix tree optimization.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Temperature-Based Fan Speed Controller",
+        timeframe: "2025",
+        role: "Embedded Systems Project — STM32 Microcontroller",
+        achievements: [
+          <>
+            Developed a PWM-controlled fan speed system using real-time temperature sensor input
+            on the STM32 microcontroller platform.
+          </>,
+          <>
+            Integrated ADC temperature readings with PWM duty cycle control for smooth,
+            automatic fan speed regulation.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Density-Based Smart Traffic Management",
+        timeframe: "2024",
+        role: "IoT Project — Sensor-based Adaptive Signal System",
+        achievements: [
+          <>
+            Created a sensor-based adaptive traffic signal management system using TinkerCAD
+            for simulation and prototyping.
+          </>,
+          <>
+            Implemented density detection logic to dynamically adjust traffic signal timing
+            based on real-time vehicle density.
           </>,
         ],
         images: [],
@@ -155,78 +165,113 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Amrita Vishwa Vidyapeetham, Coimbatore",
+        description: <>B.Tech in Computer Science & Engineering (2023–2027) — CGPA: 6.0/10</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Tirumala Junior Kalasala",
+        description: <>Intermediate (2023) — 96.1%</>,
+      },
+      {
+        name: "Tirumala Proactive School",
+        description: <>10th Standard (2021) — 100%</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Skills & Expertise",
     skills: [
       {
-        title: "Figma",
+        title: "Programming Languages",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Proficient in multiple programming languages for systems, applications, and web development.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "C", icon: "code" },
+          { name: "C++", icon: "code" },
+          { name: "Java", icon: "java" },
+          { name: "Python", icon: "python" },
+          { name: "SQL", icon: "code" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Core CS Concepts",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Strong foundation in fundamental computer science principles and software engineering.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Data Structures & Algorithms", icon: "rocket" },
+          { name: "OOP", icon: "rocket" },
+          { name: "DBMS", icon: "rocket" },
+          { name: "Operating Systems", icon: "rocket" },
+          { name: "Computer Networks", icon: "rocket" },
+          { name: "Software Engineering", icon: "rocket" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Areas of Interest",
+        description: (
+          <>Passionate about emerging technologies and building real-world solutions across multiple domains.</>
+        ),
+        tags: [
+          { name: "Cloud Computing", icon: "globe" },
+          { name: "AI/ML", icon: "rocket" },
+          { name: "Web Development", icon: "globe" },
+          { name: "Software Development", icon: "code" },
+          { name: "Embedded Systems & IoT", icon: "rocket" },
         ],
+        images: [],
+      },
+      {
+        title: "Certifications",
+        description: (
+          <>
+            Google for Startups — Prompt to Prototype (Scaler) · Foundational CS Coursework (Academic Curriculum)
+          </>
+        ),
+        tags: [
+          { name: "Google for Startups", icon: "rocket" },
+          { name: "CS Foundations", icon: "book" },
+        ],
+        images: [],
+      },
+      {
+        title: "Extracurricular Activities",
+        description: (
+          <>
+            Volunteer service during Amma (Mata Amritanandamayi Devi) visit – Feb 2025 ·
+            NSS volunteer – March 2025 · Cultural coordinator for Gokulashtami – Aug 2025
+          </>
+        ),
+        tags: [
+          { name: "Volunteering", icon: "person" },
+          { name: "NSS", icon: "person" },
+          { name: "Cultural Events", icon: "person" },
+        ],
+        images: [],
+      },
+      {
+        title: "Strengths & Hobbies",
+        description: (
+          <>
+            Quick learner · Teamwork & coordination · Discipline & patience · Good communication ·
+            Ethical & respectful attitude · Hobbies: Volunteering, Cultural events, Badminton, Outdoor sports
+          </>
+        ),
+        tags: [
+          { name: "Quick Learner", icon: "rocket" },
+          { name: "Team Player", icon: "person" },
+          { name: "Badminton", icon: "person" },
+          { name: "Sports", icon: "person" },
+        ],
+        images: [],
       },
     ],
   },
@@ -235,19 +280,15 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about tech and learning...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Engineering and dev projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
@@ -255,8 +296,6 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
