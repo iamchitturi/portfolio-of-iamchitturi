@@ -1,11 +1,11 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { Icon, Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Chaitanya",
   lastName: "Chitturi",
   name: "Chitturi Venkata Krishna Chaitanya",
-  role: "Software Developer • AI/ML Enthusiast • Full Stack Learner",
+  role: "Backend Developer • Spring Boot • REST APIs & Microservices",
   avatar: "/images/avatar.jpg",
   email: "chitturi.workspace@gmail.com",
   location: "Asia/Kolkata", // IANA time zone identifier for India
@@ -39,23 +39,26 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Crafting intelligent solutions through code & creativity</>,
+  headline: <>Building robust backends & scalable REST APIs</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Tiger Detection AI</strong>{" "}
+        <Row gap="6" vertical="center">
+          <Icon name="github" size="s" />
+          <strong>zCloudPass</strong>
+        </Row>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured project
         </Text>
       </Row>
     ),
-    href: "/work/tiger-detection-in-forest-areas-using-night-vision",
+    href: "https://github.com/zcloudpass",
   },
   subline: (
     <>
-      I'm Chaitanya, a <Text as="span" size="xl" weight="strong">Computer Science</Text> student at Amrita Vishwa Vidyapeetham, passionate about AI/ML, <br /> embedded systems, and building impactful software solutions.
+      I'm Chaitanya, a <Text as="span" size="xl" weight="strong">Backend Developer</Text> specializing in Spring Boot, REST APIs, <br /> and building secure, scalable server-side applications.
     </>
   ),
 };
@@ -82,9 +85,9 @@ const about: About = {
     description: (
       <>
         I am a Computer Science Engineering student at Amrita Vishwa Vidyapeetham (2023–2027),
-        currently building a strong technical foundation across programming, AI/ML, embedded systems,
-        and software development. I am committed to continuous learning, personal growth, and evolving
-        into a responsible and skilled professional.
+        focused on backend development with Spring Boot, REST API design, and relational databases.
+        I enjoy architecting clean, maintainable server-side systems and am committed to continuous
+        learning and evolving into a skilled backend engineer.
       </>
     ),
   },
@@ -93,71 +96,35 @@ const about: About = {
     title: "Projects",
     experiences: [
       {
-        company: "Tiger Detection in Forest Areas",
+        company: "zCloudPass",
         timeframe: "2025",
-        role: "AI/ML Project — CNN-based Classifier",
+        role: "Full-Stack Zero-Knowledge Password Manager",
+        link: "https://github.com/zcloudpass",
         achievements: [
           <>
-            Built a CNN-based tiger detection classifier using TensorFlow/Keras with image augmentation
-            for night vision forest surveillance.
+            Architected a <strong>zero-knowledge password manager</strong> where
+            all encryption and decryption happens entirely on the client side —
+            the server only stores an opaque encrypted blob per user and has no
+            ability to read vault contents, even if compromised.
           </>,
           <>
-            Implemented data preprocessing with augmentation techniques to improve model accuracy
-            on low-visibility and nocturnal images.
-          </>,
-        ],
-        images: [
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Tiger Detection Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Optimized Spell Checker",
-        timeframe: "2024",
-        role: "Data Structures Project — Trie-based Architecture",
-        achievements: [
-          <>
-            Designed and implemented a Trie-based spell checker for accurate and fast word suggestions
-            using optimized data structures.
+            Built the backend in <strong>Rust with Axum, SQLx &amp; PostgreSQL</strong>,
+            choosing Rust for memory safety and performance in a security-sensitive
+            application. Frontend built with <strong>React, TypeScript &amp; Vite</strong>;
+            cross-platform desktop app via <strong>Tauri</strong> for native performance
+            and a smaller binary footprint over Electron.
           </>,
           <>
-            Achieved efficient memory usage and rapid lookup times through prefix tree optimization.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Temperature-Based Fan Speed Controller",
-        timeframe: "2025",
-        role: "Embedded Systems Project — STM32 Microcontroller",
-        achievements: [
-          <>
-            Developed a PWM-controlled fan speed system using real-time temperature sensor input
-            on the STM32 microcontroller platform.
+            Designed a clean <strong>REST API versioned under /api/v1</strong> with
+            session token-based authentication (Bearer headers) and auth-protected
+            vault endpoints — fully separated frontend and backend repos with clean
+            API contracts.
           </>,
           <>
-            Integrated ADC temperature readings with PWM duty cycle control for smooth,
-            automatic fan speed regulation.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Density-Based Smart Traffic Management",
-        timeframe: "2024",
-        role: "IoT Project — Sensor-based Adaptive Signal System",
-        achievements: [
-          <>
-            Created a sensor-based adaptive traffic signal management system using TinkerCAD
-            for simulation and prototyping.
-          </>,
-          <>
-            Implemented density detection logic to dynamically adjust traffic signal timing
-            based on real-time vehicle density.
+            Deployed with <strong>Vercel</strong> (frontend SPA),{" "}
+            <strong>Render</strong> (containerized backend via Docker), and{" "}
+            <strong>GitHub Actions CI/CD</strong> — targeting Windows, macOS, and
+            Linux via Tauri builds.
           </>,
         ],
         images: [],
@@ -170,15 +137,7 @@ const about: About = {
     institutions: [
       {
         name: "Amrita Vishwa Vidyapeetham, Coimbatore",
-        description: <>B.Tech in Computer Science & Engineering (2023–2027) — CGPA: 6.0/10</>,
-      },
-      {
-        name: "Tirumala Junior Kalasala",
-        description: <>Intermediate (2023) — 96.1%</>,
-      },
-      {
-        name: "Tirumala Proactive School",
-        description: <>10th Standard (2021) — 100%</>,
+        description: <>B.Tech in Computer Science & Engineering (2023–2027)</>,
       },
     ],
   },
@@ -187,23 +146,65 @@ const about: About = {
     title: "Skills & Expertise",
     skills: [
       {
-        title: "Programming Languages",
+        title: "Backend Development",
         description: (
-          <>Proficient in multiple programming languages for systems, applications, and web development.</>
+          <>Interested in building scalable server-side applications, RESTful APIs, and microservice architectures using modern Java frameworks.</>
         ),
         tags: [
+          { name: "Spring Boot", icon: "code" },
+          { name: "Spring Security", icon: "code" },
+          { name: "Spring Data JPA", icon: "code" },
+          { name: "REST APIs", icon: "globe" },
+          { name: "Hibernate", icon: "code" },
+        ],
+        images: [],
+      },
+      {
+        title: "Programming Languages",
+        description: (
+          <>Proficient in languages that power robust backend systems and enterprise applications.</>
+        ),
+        tags: [
+          { name: "Java", icon: "code" },
+          { name: "SQL", icon: "code" },
+          { name: "Python", icon: "code" },
           { name: "C", icon: "code" },
           { name: "C++", icon: "code" },
-          { name: "Java", icon: "java" },
-          { name: "Python", icon: "python" },
-          { name: "SQL", icon: "code" },
+        ],
+        images: [],
+      },
+      {
+        title: "Databases & Data Management",
+        description: (
+          <>Skilled in relational database design, query optimization, and ORM-based data access layers.</>
+        ),
+        tags: [
+          { name: "MySQL", icon: "code" },
+          { name: "PostgreSQL", icon: "code" },
+          { name: "JDBC", icon: "code" },
+          { name: "JPA / Hibernate", icon: "code" },
+
+        ],
+        images: [],
+      },
+      {
+        title: "Tools & DevOps",
+        description: (
+          <>Comfortable with version control, build tools, API testing, and containerized deployments.</>
+        ),
+        tags: [
+          { name: "Git & GitHub", icon: "github" },
+          { name: "Maven", icon: "code" },
+          { name: "Postman", icon: "globe" },
+          { name: "Docker", icon: "code" },
+          { name: "IntelliJ IDEA", icon: "code" },
         ],
         images: [],
       },
       {
         title: "Core CS Concepts",
         description: (
-          <>Strong foundation in fundamental computer science principles and software engineering.</>
+          <>Strong foundation in fundamental computer science principles essential for backend engineering.</>
         ),
         tags: [
           { name: "Data Structures & Algorithms", icon: "rocket" },
@@ -216,29 +217,15 @@ const about: About = {
         images: [],
       },
       {
-        title: "Areas of Interest",
-        description: (
-          <>Passionate about emerging technologies and building real-world solutions across multiple domains.</>
-        ),
-        tags: [
-          { name: "Cloud Computing", icon: "globe" },
-          { name: "AI/ML", icon: "rocket" },
-          { name: "Web Development", icon: "globe" },
-          { name: "Software Development", icon: "code" },
-          { name: "Embedded Systems & IoT", icon: "rocket" },
-        ],
-        images: [],
-      },
-      {
         title: "Certifications",
         description: (
           <>
-            Google for Startups — Prompt to Prototype (Scaler) · Foundational CS Coursework (Academic Curriculum)
+            Google for Startups — Prompt to Prototype (Scaler)
           </>
         ),
         tags: [
           { name: "Google for Startups", icon: "rocket" },
-          { name: "CS Foundations", icon: "book" },
+
         ],
         images: [],
       },
@@ -246,8 +233,8 @@ const about: About = {
         title: "Extracurricular Activities",
         description: (
           <>
-            Volunteer service during Amma (Mata Amritanandamayi Devi) visit – Feb 2025 ·
-            NSS volunteer – March 2025 · Cultural coordinator for Gokulashtami – Aug 2025
+            Volunteer service during Amma (Mata Amritanandamayi Devi) visit to Kovai– Feb 2025 ·
+            NSS volunteer ,Coordinated Many Events – March 2025 · Cultural Coordinator for Gokulashtami Celebrations – Aug 2025
           </>
         ),
         tags: [
@@ -262,14 +249,12 @@ const about: About = {
         description: (
           <>
             Quick learner · Teamwork & coordination · Discipline & patience · Good communication ·
-            Ethical & respectful attitude · Hobbies: Volunteering, Cultural events, Badminton, Outdoor sports
+            Ethical & respectful attitude · Hobbies: Volunteering,Participating In Cultural events
           </>
         ),
         tags: [
           { name: "Quick Learner", icon: "rocket" },
           { name: "Team Player", icon: "person" },
-          { name: "Badminton", icon: "person" },
-          { name: "Sports", icon: "person" },
         ],
         images: [],
       },
@@ -288,7 +273,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Engineering and dev projects by ${person.name}`,
+  description: `Backend engineering projects by ${person.name}`,
 };
 
 const gallery: Gallery = {

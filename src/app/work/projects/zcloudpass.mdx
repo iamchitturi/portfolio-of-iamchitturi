@@ -1,0 +1,43 @@
+---
+title: "zCloudPass — Zero-Knowledge Password Manager"
+publishedAt: "2025-01-15"
+summary: "A full-stack, security-focused password manager built with a zero-knowledge architecture — the server never sees or handles any unencrypted data. All encryption and decryption happens entirely on the client side."
+images:
+  - "/images/projects/project-01/cover-02.jpg"
+team:
+  - name: "Chitturi Venkata Krishna Chaitanya"
+    role: "Full-Stack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://github.com/iamchitturi"
+link: "https://github.com/zcloudpass"
+---
+
+## Overview
+
+zCloudPass is a full-stack, security-focused password manager built with a **zero-knowledge architecture** — meaning the server never sees or handles any unencrypted data. All encryption and decryption happens entirely on the client side. Users can securely store, sync, and access passwords across devices while the server only stores an opaque encrypted blob per user.
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Frontend / Desktop App** | React, TypeScript, Vite, Tailwind CSS, Tauri (Rust) |
+| **Backend API** | Rust, Axum, SQLx, PostgreSQL, Tokio |
+| **Auth** | Session token-based authentication with Bearer headers |
+| **Deployment** | Vercel (frontend), Render (backend), Docker |
+| **Testing** | Vitest (frontend), Rust tests (backend) |
+| **CI/CD** | GitHub Actions |
+
+## Architecture Highlights
+
+- **Fully separated frontend and backend repos** with clean API contracts
+- **Client-side encryption** — plaintext secrets are never transmitted or logged
+- **Cross-platform desktop app** via Tauri targeting Windows, macOS, and Linux
+- **Web app deployed on Vercel** with SPA routing support
+- **Containerized backend** with Docker and Render deployment config
+- **REST API versioned under `/api/v1`** with auth-protected vault endpoints
+
+## Key Engineering Decisions
+
+- **Rust for the backend** — chosen for memory safety and performance in a security-sensitive application
+- **Tauri over Electron** — native performance and a significantly smaller binary footprint
+- **Zero-knowledge by design** — the product is secure by architecture, not just by policy; even a compromised server cannot read user vault contents
