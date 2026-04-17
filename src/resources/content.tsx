@@ -44,7 +44,7 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <Row gap="6" vertical="center">
+        <Row gap="8" vertical="center">
           <Icon name="github" size="s" />
           <strong>zCloudPass</strong>
         </Row>
